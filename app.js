@@ -12,7 +12,7 @@ app.set('view engine', 'mustache')
 //Listening on root
 app.get('/', function (req, res) {
 
-  res.render('data.js', {text: Robot Dorectory});
+  res.render('data.js', {});
 });
 
 app.listen(3000, function () {
