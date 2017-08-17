@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  text-align: center;
+  align-content: center;
+}
+
+div.col-xs-12 {
+  justify-content: center;
+  padding: 20px;
+}
+
+.b {
+  color: blue;
+}
+
+div.name {
+  color: blue;
+}
+
+div.users {
+  width: 300px;
+  border: 2px solid lightgrey;
+  box-sizing: border-box;
+  border-collapse: separate;
+  border-spacing: 10px;
+  align-content: center;
+  padding: 10px;
+  margin: 10px;
+}

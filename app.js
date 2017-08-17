@@ -1,20 +1,30 @@
 const express = require('express');
 const path = require('path');
 const mustacheExpress = require('mustache-express');
-const dataset = require('data.js');
+const mustache = require('mustache')
+const data = require('./data.js');
+var bodyParser = require('body-parser');
 
 const app = express();
 
 app.engine('mustache', mustacheExpress());
-app.set('views', __dirname + '/views')
-app.set('view engine', 'mustache')
+app.set('views', './views');
+app.set('view engine', 'mustache');
+app.use(express.static( __dirname + '/public'));
+
 
 //Listening on root
-app.get('/', function (req, res) {
-
-  res.render('data.js', {});
+app.get('/users', function (req, res) {
+      res.render('users', data)
 });
+
+//app.get('/', function(req, res){
+//  res.sendFile(path.join(__dirname + '/index.mustache'));
+
+
+
+
 
 app.listen(3000, function () {
   console.log('Successfully started express application!');
-})
+});
