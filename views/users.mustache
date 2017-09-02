@@ -7,18 +7,17 @@
 
     <title>User Directory</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
 <body>
+    <h1>Robot Directory Index</h1>
+    <div class="flex_container">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1>Robot Directory Index</h1>
           {{#users}}
           <div class="users">
 
-            <img class = "avatar" src="{{avatar}}" alt="">
+            <img class = "avatar" src="{{avatar}}" alt="" /><br>
+            
             <a href="/users/{{id}}">{{name}}</a>
              {{#job}}
               <p>{{job}}</p>
@@ -29,8 +28,8 @@
             {{/job}}
         </div>
         {{/users}}
-        </div>
-      </div>
+        </>
+      </>
     </div>
 
 

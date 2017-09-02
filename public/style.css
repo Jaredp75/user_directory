@@ -1,22 +1,29 @@
 body {
   font-family: sans-serif;
-  padding: 20px;
-  text-align: center;
-  align-content: center;
+
 }
 
-div.col-xs-12 {
-  justify-content: center;
-  padding: 20px;
+.flex_container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-div.users {
-  width: 300px;
+.users {
   border: 2px solid lightgrey;
-  box-sizing: border-box;
-  border-collapse: separate;
-  border-spacing: 10px;
-  align-content: center;
+  box-shadow: 2px 2px 2px grey;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.profile-details {
+  border: 2px solid lightgrey;
+  box-shadow: 2px 2px 2px grey;
+  width: 500px;
+  height: 300px;
+  text-align: center;
   padding: 10px;
   margin: 10px;
 }
