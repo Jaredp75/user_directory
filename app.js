@@ -14,13 +14,16 @@ app.use(express.static( __dirname + '/public'));
 
 
 //Listening on root
-app.get('/users', function (req, res) {
+app.get('/users/', function (req, res) {
       res.render('users', data)
 });
 
 //app.get('/', function(req, res){
 //  res.sendFile(path.join(__dirname + '/index.mustache'));
-
+app.get('/users/:id', function(req, res) {
+  let userID = req.params.id - 1;
+  res.render('profile', data.users[userID]);
+})
 
 
 
