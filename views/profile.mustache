@@ -3,11 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My HTML Page</title>
+  <title>Robot Profile</title>
   <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
 </head>
 <body>
-  <div id="root"></div>
+
+
+  <div>
+    <img class="avatar-image" src="{{avatar}}" alt="">
+    <div class="profile-details">
+      <h2>{{name}}</h2>
+      <p>{{#address.city}}{{address.city}},{{/address.city}} {{address.country}} |
+        {{#job}}
+          {{job}}, {{company}}
+        {{/job}}
+        {{^job}}
+          Available for hire!
+        {{/job}}
+      </p>
+      <p>{{email}} | {{phone}}</>
+  </div>
+
+  <table>
+      {{#university}}
+      <tr>
+          <th>Education</th>
+          <td>{{university}}</td>
+      </tr>
+      {{/university}}
+
+      <tr>
+
+
+
+
+
+
+
+
   <script src="main.js" type="text/javascript"></script>
 </body>
 </html>
